@@ -137,9 +137,11 @@ jobs:
           rename: '@subql/node-flare'
         
       #update imports
+      
+      - run: chmod +x ./scripts/update_flare_imports.sh
 
       - name: Update imports to flare
-        run: sudo ./scripts/update_flare_imports.sh
+        run: ./scripts/update_flare_imports.sh
 
       - run: yarn
 
