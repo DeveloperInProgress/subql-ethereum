@@ -26,7 +26,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: onfinality
+          username:  guplersaxanoid
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       ## node
@@ -42,7 +42,7 @@ jobs:
           push: true
           platforms: arm64,amd64
           file: ./packages/node/Dockerfile
-          tags: onfinality/subql-node-ethereum:v${{ steps.get-node-version.outputs.NODE_VERSION }}
+          tags: gupler/subql-node-ethereum:v${{ steps.get-node-version.outputs.NODE_VERSION }}
           build-args: RELEASE_VERSION=${{ steps.get-node-version.outputs.NODE_VERSION }}
 
       - name: Build and push
@@ -52,7 +52,7 @@ jobs:
           push: true
           platforms: arm64,amd64
           file: ./packages/node/Dockerfile
-          tags: onfinality/subql-node-ethereum:v${{ steps.get-node-version.outputs.NODE_VERSION }},onfinality/subql-node-ethereum:latest
+          tags: gupler/subql-node-ethereum:v${{ steps.get-node-version.outputs.NODE_VERSION }},gupler/subql-node-ethereum:latest
           build-args: RELEASE_VERSION=${{ steps.get-node-version.outputs.NODE_VERSION }}
 
       #change container names
@@ -68,7 +68,7 @@ jobs:
           push: true
           platforms: arm64,amd64
           file: ./packages/node/Dockerfile
-          tags: onfinality/subql-node-flare:v${{ steps.get-node-version.outputs.NODE_VERSION }}
+          tags: gupler/subql-node-flare:v${{ steps.get-node-version.outputs.NODE_VERSION }}
           build-args: RELEASE_VERSION=${{ steps.get-node-version.outputs.NODE_VERSION }}
 
       - name: Build and push flare
@@ -78,7 +78,7 @@ jobs:
           push: true
           platforms: arm64,amd64
           file: ./packages/node/Dockerfile
-          tags: onfinality/subql-node-flare:v${{ steps.get-node-version.outputs.NODE_VERSION }},onfinality/subql-node-flare:latest
+          tags: gupler/subql-node-flare:v${{ steps.get-node-version.outputs.NODE_VERSION }},gupler/subql-node-flare:latest
           build-args: RELEASE_VERSION=${{ steps.get-node-version.outputs.NODE_VERSION }}
 
       - name: Image digest
