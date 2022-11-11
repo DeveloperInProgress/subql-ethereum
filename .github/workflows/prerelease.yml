@@ -142,6 +142,8 @@ jobs:
 
       - name: Update imports to flare
         run: ./scripts/update_flare_imports.sh
+        
+      - run: rm -rf ./yarn.lock
 
       - run: yarn
 
