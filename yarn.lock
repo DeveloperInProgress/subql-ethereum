@@ -2902,13 +2902,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@subql/common-flare@workspace:*, @subql/common-flare@workspace:packages/common-ethereum":
+"@subql/common-ethereum@workspace:*, @subql/common-ethereum@workspace:packages/common-ethereum":
   version: 0.0.0-use.local
-  resolution: "@subql/common-flare@workspace:packages/common-ethereum"
+  resolution: "@subql/common-ethereum@workspace:packages/common-ethereum"
   dependencies:
     "@polkadot/util": ^8
     "@subql/common": latest
-    "@subql/types-flare": "workspace:*"
+    "@subql/types-ethereum": "workspace:*"
     "@types/bn.js": 4.11.6
     "@types/js-yaml": ^4.0.4
     "@types/pino": ^6.3.12
@@ -3001,9 +3001,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@subql/node-flare@workspace:packages/node":
+"@subql/node-etherum@workspace:packages/node":
   version: 0.0.0-use.local
-  resolution: "@subql/node-flare@workspace:packages/node"
+  resolution: "@subql/node-etherum@workspace:packages/node"
   dependencies:
     "@apollo/client": 3.5.8
     "@nestjs/common": ^8.2.6
@@ -3014,9 +3014,9 @@ __metadata:
     "@nestjs/schematics": ^8.0.5
     "@nestjs/testing": ^8.2.6
     "@subql/common": latest
-    "@subql/common-flare": "workspace:*"
+    "@subql/common-ethereum": "workspace:*"
     "@subql/node-core": 1.3.3
-    "@subql/types-flare": "workspace:*"
+    "@subql/types-ethereum": "workspace:*"
     "@subql/utils": latest
     "@subql/x-merkle-mountain-range": 2.0.0-0.1.2
     "@types/app-module-path": ^2.2.0
@@ -3056,9 +3056,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@subql/types-flare@workspace:*, @subql/types-flare@workspace:packages/types":
+"@subql/types-ethereum@workspace:*, @subql/types-ethereum@workspace:packages/types":
   version: 0.0.0-use.local
-  resolution: "@subql/types-flare@workspace:packages/types"
+  resolution: "@subql/types-ethereum@workspace:packages/types"
   dependencies:
     "@ethersproject/abstract-provider": ^5.6.1
     "@polkadot/api": ^9
