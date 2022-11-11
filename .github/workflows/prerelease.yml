@@ -138,13 +138,11 @@ jobs:
         
       #update imports
       
-      - run: chmod +x ./scripts/update_flare_imports.sh
+      - run: chmod +x ./github/actions/scripts/update_flare_imports.sh
 
       - name: Update imports to flare
-        run: ./scripts/update_flare_imports.sh
+        run: ./github/actions/scripts/update_flare_imports.sh
         
-      - run: rm -rf ./yarn.lock
-
       - run: yarn
 
       - name: build
@@ -172,31 +170,31 @@ jobs:
           package-path: packages/node
           npm-token: ${{ secrets.NPM_TOKEN }}
           
-      #Rvert packages names
-      - name: Change common ethereum to flare
+      #Revert packages names
+      - name: Change common flare to ethereum
         uses: jaywcjlove/github-action-package@main
         with:
           path: packages/common-ethereum/package.json
           rename: '@subql/common-ethereum'
 
-      - name: Change types ethereum to flare
+      - name: Change types flare to ethereum
         uses: jaywcjlove/github-action-package@main
         with:
           path: packages/types/package.json
           rename: '@subql/types-ethereum'
 
-      - name: Change node ethereum to flare
+      - name: Change node flare to ethereum
         uses: jaywcjlove/github-action-package@main
         with:
           path: packages/node/package.json
-          rename: '@subql/node-etherum'
+          rename: '@subql/node-ethereum'
       
       #Revert imports
             
-      - run: chmod +x ./scripts/revert_import_ethereum.sh
+      - run: chmod +x ./github/actions/scripts/revert_import_ethereum.sh
 
       - name: Update imports to flare
-        run: ./scripts/revert_import_ethereum.sh
+        run: ./github/actions/scripts/revert_import_ethereum.sh
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v5
