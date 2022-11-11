@@ -139,7 +139,7 @@ jobs:
       #update imports
 
       - name: Update imports to flare
-        run: ./scripts/update_flare_imports.sh
+        run: sudo ./scripts/update_flare_imports.sh
 
       - run: yarn
 
