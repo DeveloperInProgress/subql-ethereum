@@ -24,7 +24,7 @@ jobs:
   Bump-Prerelease-Publish:
     name: Bump-Prerelease-Publish
     needs: pre-ci
-    if: "!startsWith(github.event.head_commit.message, '[SKIP CI]') && !startsWith(github.event.head_commit.message, '[release]') && github.repository == 'subquery/subql-ethereum'"
+    if: "!startsWith(github.event.head_commit.message, '[SKIP CI]') && !startsWith(github.event.head_commit.message, '[release]') && github.repository == 'DeveloperInProgress/subql-ethereum'"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -89,7 +89,7 @@ jobs:
   Bump-Prerelease-Flare-Publish:
     name: Bump-Prerelease-Flare-Publish
     needs: Bump-Prerelease-Publish
-    if: "!startsWith(github.event.head_commit.message, '[SKIP CI]') && !startsWith(github.event.head_commit.message, '[release]') && github.repository == 'subquery/subql-ethereum'"
+    if: "!startsWith(github.event.head_commit.message, '[SKIP CI]') && !startsWith(github.event.head_commit.message, '[release]') && github.repository == 'DeveloperInProgress/subql-ethereum'"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
